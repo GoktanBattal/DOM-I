@@ -40,3 +40,50 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+
+//IMAGES
+const logoImg = document.querySelector("#logo-img")
+logoImg.src = siteContent.images['logo-img']
+
+const ctaImg = document.querySelector('#cta-img')
+ctaImg.src = siteContent.images['cta-img']
+
+const midImg = document.querySelector('#middle-img')
+midImg.setAttribute("src", siteContent.images["accent-img"])
+
+// Footer Link
+const footerLink = document.querySelector('footer a')
+footerLink.textContent = siteContent.footer.copyright
+footerLink.classList.add("bold")
+
+// Contact
+const contact = document.querySelector("section.contact")
+contact.querySelector('h4').textContent = siteContent.contact["contact-h4"]
+//contact.children[0].textContent = siteContentcontact['contact-h4']
+contact.querySelector("p:nth-of-type(1)").textContent = siteContent.contact.address
+//contact.children[1].textContent = siteContentcontact['address']
+contact.querySelector("p:nth-of-type(2)").textContent = siteContent.contact.phone
+contact.querySelector("p:nth-of-type(3)").textContent = siteContent.contact.email
+
+
+// Top Content
+
+const topContent = document.querySelector('.top-content')
+topContent.children[0].children[0].textContent = siteContent['main-content']['features-h4']
+topContent.children[0].children[1].textContent = siteContent['main-content']['features-content']
+
+topContent.children[1].children[0].textContent = siteContent['main-content']['about-h4']
+topContent.children[1].children[1].textContent = siteContent['main-content']['about-content']
+
+// Bottom Content
+
+const bottomContent = document.querySelector('.bottom-content')
+bottomContent.children[0].children[0].textContent = siteContent['main-content']['services-h4']
+bottomContent.children[0].children[1].textContent = siteContent['main-content']['services-content']
+
+bottomContent.children[1].children[0].textContent = siteContent['main-content']['product-h4']
+bottomContent.children[1].children[1].textContent = siteContent['main-content']['product-content']
+
+bottomContent.children[2].children[0].textContent = siteContent['main-content']['vision-h4']
+bottomContent.children[2].children[1].textContent = siteContent['main-content']['vision-content']
