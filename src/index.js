@@ -102,6 +102,31 @@ psBottom[2].textContent = siteContent['main-content']['vision-content']
 
 //CTA
 
+/* this will work as well
 const cta = document.querySelector('section.cta')
 cta.querySelector('h1').textContent = siteContent.cta.h1
 cta.querySelector('button').textContent = siteContent.cta.button
+*/
+
+document.querySelector('.cta .cta-text h1').textContent = siteContent.cta.h1
+document.querySelector('.cta .cta-text button').textContent = siteContent.cta.button
+
+//NAV
+
+/*
+const nav = document.querySelectorAll('nav a')
+nav[0].textContent = siteContent['main-content']['features-h4']
+nav[1].textContent = siteContent['main-content']['about-h4']
+nav[2].textContent = siteContent['main-content']['services-h4']
+nav[3].textContent = siteContent['main-content']['product-h4']
+nav[4].textContent = siteContent['main-content']['vision-h4']
+nav[5].textContent = siteContent['contact'][`contact-h4`]
+*/
+
+const navLinks = document.querySelectorAll("header nav a")
+const navLinkTexts = Object.values(siteContent.nav)
+
+navLinks.forEach((link, idx) =>{
+  link.textContent = navLinkTexts[idx]
+  link.classList.add('italic')
+})
