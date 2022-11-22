@@ -99,3 +99,9 @@ const psBottom = bottomContent.querySelectorAll('p')
 psBottom[0].textContent = siteContent['main-content']['services-content']
 psBottom[1].textContent = siteContent['main-content']['product-content']
 psBottom[2].textContent = siteContent['main-content']['vision-content']
+
+//CTA
+
+const cta = document.querySelector('section.cta')
+cta.querySelector('h1').textContent = siteContent.cta.h1
+cta.querySelector('button').textContent = siteContent.cta.button
